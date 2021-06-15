@@ -1,3 +1,14 @@
-p {
-  color: red;
-}
+@import "./globals/variables.scss";
+@import "./globals/mixin.scss";
+@import "./globals/font-face.scss";
+@import "./globals/viewports.scss";
+@import "./globals/base.scss";
+@import "./globals/container.scss";
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/toggle.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/hiking.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/social.scss";
+@import "./blocks/visually-hidden.scss";

@@ -1,0 +1,11 @@
+.page__body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $basic-black;
+  min-width: 320px;
+  min-height: 100vh;
+  align-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}

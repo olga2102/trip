@@ -1,0 +1,19 @@
+.main-nav {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 0 45px;
+  justify-content: start;
+}
+
+.main-nav__link {
+  color: $basic-white;
+  font-size: 16px;
+  line-height: 158.86%;
+}

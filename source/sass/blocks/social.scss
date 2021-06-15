@@ -1,0 +1,28 @@
+.social {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.social__list {
+  @include list-reset;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $opacity-blue;
+  width: 21px;
+  height: 21px;
+
+  &:not(:last-child) {
+    margin-right: 17px;
+  }
+}
+
+.social svg {
+  fill: $basic-white;
+}

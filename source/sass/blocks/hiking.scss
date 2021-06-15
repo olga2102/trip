@@ -1,0 +1,94 @@
+.hiking__wrapper {
+  max-width: 50%;
+  padding-bottom: 50px;
+  margin-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 70%;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+  }
+}
+
+.hiking h2 {
+  position: relative;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 55px;
+  color: $basic-white;
+  margin: 0 0 20px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 35px;
+    line-height: 43px;
+    padding-right: 45px;
+    margin: 0 0 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 27px;
+    line-height: 33px;
+    padding-right: 0;
+    margin: 0 0 10px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "TREKKING";
+    font-weight: 900;
+    font-size: 93px;
+    line-height: 113px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $basic-white;
+    opacity: 0.2;
+    top: -85%;
+
+    @media (max-width: $tablet-width) {
+      font-size: 69px;
+      line-height: 84px;
+      top: -40%;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 41px;
+      line-height: 50px;
+      top: -15%;
+    }
+  }
+}
+
+.hiking p {
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 148.6%;
+  color: $basic-white;
+  padding-right: 18%;
+  margin: 0 0 40px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+    margin: 0 0 26px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    padding-right: 25%;
+  }
+}
+
+.hiking a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 158.86%;
+  color: $basic-white;
+  background-color: $background-blue;
+  padding: 20px 39px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    padding: 15px 21px;
+  }
+}

@@ -4,10 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Походы в горы по России</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="fonts/montserrat.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/monserratbold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/montserratextrabold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/montserratmedium.woff2" as="font" rel="preload" crossorigin="anonymous">
 </head>
-<body>
-    <p>hi</p>
+<body class="page__body">
+  <header class="header">
+    <div class="header__wrapper">
+      <button class="toggle toggle--closed" type="button" aria-label="Переключение меню" tabindex="1"></button>
+      <a class="header__logo logo">
+        <img src="img/logo.svg" width="207" height="62" alt="Логотип организации походов в горы по России">
+      </a>
+      <nav class="main-nav main-nav--open">
+        <ul class="main-nav__list">
+          <li>
+            <a class="main-nav__link" href="#tours">
+              Туры
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="#training">
+              Обучение
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="#aboutus">
+              О нас
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="#reviews">
+              Отзывы
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="#fotos">
+              Фотографии
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="#contacts">
+             Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__tel" href="tel:88007253232">
+        8 800 725 32 32
+      </a>
+    </div>
+    <section class="header__hiking hiking">
+      <div class="container">
+      <div class="hiking__wrapper hiking__wrapper--picture">
+        <h2>Походы в горы России</h2>
+        <p>Профессионально организовываем экскурсии на самые красивые вершины страны </p>
+        <a href="#tours">Выбрать экскурсию</a>
+      </div>
+    </div>
+    </section>
+    <section class="social">
+      <div class="container">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://www.vkontakte.com/lifetour"
+              aria-label="Ссылка на Вконтакте Лайфтура">
+              <svg class="social-picture" width="12" height="7">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/lifetour"
+              aria-label="Ссылка на Фэйсбук Лайфтура">
+              <svg class="social-picture" width="6" height="11">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/instagram"
+              aria-label="Ссылка на Инстаграм Лайфтура">
+              <svg class="social-picture" width="13" height="13">
+                <use xlink:href="img/sprite.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </section>
+  </header>
+  <main>
+    <h1 class="visually-hidden"></h1>
+    <section class="tours">
+
+    </section>
+  </main>
 </body>
 </html>

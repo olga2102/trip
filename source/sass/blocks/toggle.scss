@@ -1,0 +1,66 @@
+.toggle {
+  @include button-reset;
+  display: none;
+  position: relative;
+  width: 24px;
+  height: 16px;
+  z-index: 2;
+
+  // Кнопка при закрытом состоянии меню
+  &--closed {
+    @media (max-width: $tablet-width) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: "";
+        width: 24px;
+        height: 2px;
+        position: absolute;
+        top: 30%;
+        right: 50%;
+        transform: translate(50%, 50%);
+        background-color: $basic-white;
+        box-shadow: 0 7px 0 0 $basic-white, 0 14px 0 0 $basic-white;
+      }
+    }
+  }
+
+  // Кнопка при открытом состоянии меню
+  &--opened {
+    display: flex;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: $button-close-grey;
+      right: 20%;
+      top: 50%;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:focus {
+    outline: 2px solid $basic-black;
+  }
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    background-color: $blue-active;
+  }
+}
