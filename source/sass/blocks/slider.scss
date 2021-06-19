@@ -1,0 +1,23 @@
+.slider {
+  @include button-reset;
+  position: relative;
+  width: 37px;
+  height: 35px;
+  background-color: $background-blue;
+
+  &--next::before,
+  &--prev::before {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 10px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    top: 39%;
+    left: 30%;
+  }
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}

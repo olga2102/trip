@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Походы в горы по России</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="fonts/montserrat.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Походы в горы по России</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="fonts/montserrat.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="fonts/monserratbold.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="fonts/montserratextrabold.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="fonts/montserratmedium.woff2" as="font" rel="preload" crossorigin="anonymous">
 </head>
+
 <body class="page__body">
   <header class="header">
     <div class="header__wrapper">
@@ -47,7 +49,7 @@
           </li>
           <li>
             <a class="main-nav__link" href="#contacts">
-             Контакты
+              Контакты
             </a>
           </li>
         </ul>
@@ -58,12 +60,12 @@
     </div>
     <section class="header__hiking hiking">
       <div class="container">
-      <div class="hiking__wrapper hiking__wrapper--picture">
-        <h2>Походы в горы России</h2>
-        <p>Профессионально организовываем экскурсии на самые красивые вершины страны </p>
-        <a href="#tours">Выбрать экскурсию</a>
+        <div class="hiking__wrapper hiking__wrapper--picture">
+          <h2>Походы в горы России</h2>
+          <p>Профессионально организовываем экскурсии на самые красивые вершины страны </p>
+          <a href="#tours">Выбрать экскурсию</a>
+        </div>
       </div>
-    </div>
     </section>
     <section class="social">
       <div class="container">
@@ -94,13 +96,196 @@
           </li>
         </ul>
       </div>
-      </section>
+    </section>
   </header>
   <main>
     <h1 class="visually-hidden"></h1>
     <section class="tours">
+      <div class="tours__inner">
+        <h2>Ближайшие туры</h2>
+        <div class="tours__slider">
+          <button class="tours__button slider slider--prev"></button>
+          <button class="tours__button slider slider--next"></button>
+        </div>
+      </div>
+      <ul class="tours__list">
+        <li>
+          <a href="#">
+            <picture>
+              <!-- 1х: 384px/412px; 2x: 768px/824px -->
+              <img src="img/elbrus.jpg" srcset="img/elbrus@2x.jpg" width="384" height="412"
+                alt="Фото с видом на гору Эльбрус и реку">
+            </picture>
 
+          <div class="tours__info">
+            <div>
+              <p class="tours__text tours__text--place">Кавказ</p>
+              <p class="tours__text tours__text--day">4 дня</p>
+              <p class="tours__text tours__text--night">3 ночи</p>
+            </div>
+            <h3>Путешествие вокруг&nbsp;Эльбруса</h3>
+            <dl class="tours__description">
+              <dt class="tours__text">Сложность</dt>
+              <dd>
+              <ul>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+              </ul>
+            </dd>
+            </dl>
+            <dl class="tours__description">
+            <dt class="tours__text">Даты набора</dt>
+             <dd>12.06-19.06</dd>
+          </dl>
+          <dl class="tours__description">
+            <dt class="tours__text">Группа</dt>
+            <dd>до 15 чел.</dd>
+          </dl>
+          </div>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+            <picture>
+              <!-- 1х: 384px/412px; 2x: 768px/824px -->
+              <img src="img/beluha.jpg" srcset="img/beluha@2x.jpg" width="384" height="412"
+                alt="Фото с видом на заснеженную гору Белуха и реку">
+            </picture>
+          <div class="tours__info">
+            <div>
+            <p class="tours__text tours__text--place">Алтай</p>
+            <p class="tours__text tours__text--day">14 дня</p>
+            <p class="tours__text tours__text--night">13 ночи</p>
+          </div>
+            <h3>Путь к подножию Белухи</h3>
+            <dl class="tours__description">
+              <dt class="tours__text">Сложность</dt>
+              <dd>
+              <ul>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+              </ul>
+              </dd>
+              </dl>
+              <dl class="tours__description">
+                <dt class="tours__text">Даты набора</dt>
+                <dd>14.06-23.06</dd>
+              </dl>
+              <dl class="tours__description">
+                <dt class="tours__text">Группа</dt>
+                <dd>до 25 чел.</dd>
+              </dl>
+              </div>
+            </a>
+        </li>
+        <li>
+          <a href="#">
+            <picture>
+              <!-- 1х: 384px/412px; 2x: 768px/824px -->
+              <img src="img/fisht.jpg" srcset="img/fisht@2x.jpg" width="384" height="412"
+                alt="Фото с видом на скалистые вершины">
+            </picture>
+          <div class="tours__info">
+            <div>
+            <p class="tours__text tours__text--place">Адыгея</p>
+            <p class="tours__text tours__text--day">7 дней</p>
+            <p class="tours__text tours__text--night">6 ночей</p>
+            </div>
+            <h3>Через Фишт к&nbsp;Черному&nbsp;морю</h3>
+            <dl class="tours__description">
+              <dt class="tours__text">Сложность</dt>
+              <dd>
+              <ul>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#white-star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="social-picture" width="15" height="13">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+              </ul>
+            </dd>
+            </dl>
+            <dl class="tours__description">
+              <dt class="tours__text">Даты набора</dt>
+              <dd>15.07-19.07</dd>
+            </dl>
+            <dl class="tours__description">
+              <dt class="tours__text">Группа</dt>
+              <dd>до 22 чел.</dd>
+            </dl>
+          </div>
+          </a>
+        </li>
+      </ul>
+      <a class="tours__link" href="#tours">Показать все туры</a>
     </section>
   </main>
+  <!-- <script src="js/script.js"></script> -->
 </body>
+
 </html>
