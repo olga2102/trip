@@ -1,0 +1,70 @@
+.feedback {
+  overflow: hidden;
+  width: 100%;
+  height: 795px;
+  background-image: url("../img/forest.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (max-width: $tablet-width) {
+    background-size: cover;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 600px;
+    background-position-x: center;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 195px;
+  padding: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 270px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    margin-top: 165px;
+  }
+}
+
+.feedback__form {
+  margin: auto;
+}
+
+.feedback__title {
+  margin: 0 0 30px;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 43px;
+  color: white;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 20px;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.feedback__text {
+  margin: 0 0 40px;
+  font-size: 16px;
+  line-height: 151.03%;
+  color: white;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
+  @media (max-width: $mobile-width) {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 151.03%;
+  }
+}

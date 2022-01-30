@@ -8,6 +8,10 @@
   @include list-reset;
   display: flex;
   justify-content: flex-end;
+
+  &--footer {
+    justify-content: center;
+  }
 }
 
 .social__item {
@@ -21,8 +25,23 @@
   &:not(:last-child) {
     margin-right: 17px;
   }
+
+  &--border {
+    background-color: $basic-white;
+    border: 1px solid $font-color;
+  }
 }
 
-.social svg {
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__picture {
   fill: $basic-white;
+
+  &--black {
+    fill: $font-color;
+  }
 }

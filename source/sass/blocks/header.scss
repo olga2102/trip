@@ -35,18 +35,25 @@
 }
 
 .header__wrapper {
+  position: relative;
   display: flex;
   max-width: 1195px;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 45px 47px;
+  padding: 45px 1.5%;
   margin: 0 auto 115px;
 
   @media (max-width: $tablet-width) {
-    max-width: 639px;
-    padding: 35px 47px;
+    padding: 35px 15%;
     margin: 0 auto 80px;
+
+    &--opened {
+      height: 100vh;
+      overflow: auto;
+      background-color:  $background-blue;
+      align-items: flex-start;
+    }
   }
 
   @media (max-width: $mobile-width) {

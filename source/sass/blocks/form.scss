@@ -1,0 +1,45 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.form__label {
+  min-width: 30%;
+  margin-bottom: 10px;
+}
+
+.form__input {
+  padding: 10px 30px;
+  min-width: 100%;
+  min-height: 65px;
+
+  @media (max-width: $mobile-width) {
+    min-height: 50px;
+  }
+}
+
+.form__input::placeholder {
+  font-size: 16px;
+  color: gray;
+}
+
+.form__button {
+  @include button-reset;
+  margin-bottom: 10px;
+  min-width: 30%;
+  min-height: 65px;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  background-color: $background-blue;
+
+  @media (max-width: $mobile-width) {
+    min-height: 50px;
+  }
+}

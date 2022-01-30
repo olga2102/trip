@@ -11,6 +11,7 @@
   <link href="fonts/monserratbold.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="fonts/montserratextrabold.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="fonts/montserratmedium.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body class="page__body">
@@ -18,36 +19,36 @@
     <div class="header__wrapper">
       <button class="toggle toggle--closed" type="button" aria-label="Переключение меню" tabindex="1"></button>
       <a class="header__logo logo">
-        <img src="img/logo.svg" width="207" height="62" alt="Логотип организации походов в горы по России">
+        <img class="logo__img" src="img/logo.svg" width="207" height="62" alt="Логотип организации походов в горы по России">
       </a>
-      <nav class="main-nav main-nav--open">
+      <nav class="main-nav main-nav main-nav--opened">
         <ul class="main-nav__list">
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#tours">
               Туры
             </a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#training">
               Обучение
             </a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#aboutus">
               О нас
             </a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#reviews">
               Отзывы
             </a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#fotos">
               Фотографии
             </a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#contacts">
               Контакты
             </a>
@@ -73,7 +74,7 @@
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://www.vkontakte.com/lifetour"
               aria-label="Ссылка на Вконтакте Лайфтура">
-              <svg class="social-picture" width="12" height="7">
+              <svg class="social__picture" width="12" height="7">
                 <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </a>
@@ -81,7 +82,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/lifetour"
               aria-label="Ссылка на Фэйсбук Лайфтура">
-              <svg class="social-picture" width="6" height="11">
+              <svg class="social__picture" width="6" height="11">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
@@ -89,7 +90,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/instagram"
               aria-label="Ссылка на Инстаграм Лайфтура">
-              <svg class="social-picture" width="13" height="13">
+              <svg class="social__picture" width="13" height="13">
                 <use xlink:href="img/sprite.svg#insta"></use>
               </svg>
             </a>
@@ -100,192 +101,558 @@
   </header>
   <main>
     <h1 class="visually-hidden"></h1>
-    <section class="tours">
-      <div class="tours__inner">
-        <h2>Ближайшие туры</h2>
-        <div class="tours__slider">
-          <button class="tours__button slider slider--prev"></button>
-          <button class="tours__button slider slider--next"></button>
+    <section class="tours" id="tours">
+      <div class="tours__swiper swiper">
+        <div class="tours__inner">
+          <h2 class="tours__title">Ближайшие туры</h2>
+          <button class="tours__button swiper-button swiper-button--prev"></button>
+          <button class="tours__button swiper-button swiper-button--next"></button>
         </div>
-      </div>
-      <ul class="tours__list">
-        <li>
-          <a href="#">
-            <picture>
-              <!-- 1х: 384px/412px; 2x: 768px/824px -->
-              <img src="img/elbrus.jpg" srcset="img/elbrus@2x.jpg" width="384" height="412"
-                alt="Фото с видом на гору Эльбрус и реку">
-            </picture>
+        <ul class="tours__list swiper-wrapper">
+          <li class="tours__item swiper-slide">
+            <a href="#">
+              <picture>
+                <!-- 1х: 384px/412px; 2x: 768px/824px -->
+                <img src="img/elbrus.jpg" srcset="img/elbrus@2x.jpg" width="384" height="412"
+                  alt="Фото с видом на гору Эльбрус и реку">
+              </picture>
 
-          <div class="tours__info">
-            <div>
-              <p class="tours__text tours__text--place">Кавказ</p>
-              <p class="tours__text tours__text--day">4 дня</p>
-              <p class="tours__text tours__text--night">3 ночи</p>
-            </div>
-            <h3>Путешествие вокруг&nbsp;Эльбруса</h3>
-            <dl class="tours__description">
-              <dt class="tours__text">Сложность</dt>
-              <dd>
-              <ul>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </li>
-              </ul>
-            </dd>
-            </dl>
-            <dl class="tours__description">
-            <dt class="tours__text">Даты набора</dt>
-             <dd>12.06-19.06</dd>
-          </dl>
-          <dl class="tours__description">
-            <dt class="tours__text">Группа</dt>
-            <dd>до 15 чел.</dd>
-          </dl>
-          </div>
-        </a>
-        </li>
-        <li>
-          <a href="#">
-            <picture>
-              <!-- 1х: 384px/412px; 2x: 768px/824px -->
-              <img src="img/beluha.jpg" srcset="img/beluha@2x.jpg" width="384" height="412"
-                alt="Фото с видом на заснеженную гору Белуха и реку">
-            </picture>
-          <div class="tours__info">
-            <div>
-            <p class="tours__text tours__text--place">Алтай</p>
-            <p class="tours__text tours__text--day">14 дня</p>
-            <p class="tours__text tours__text--night">13 ночи</p>
-          </div>
-            <h3>Путь к подножию Белухи</h3>
-            <dl class="tours__description">
-              <dt class="tours__text">Сложность</dt>
-              <dd>
-              <ul>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </li>
-              </ul>
-              </dd>
-              </dl>
-              <dl class="tours__description">
-                <dt class="tours__text">Даты набора</dt>
-                <dd>14.06-23.06</dd>
-              </dl>
-              <dl class="tours__description">
-                <dt class="tours__text">Группа</dt>
-                <dd>до 25 чел.</dd>
-              </dl>
+              <div class="tours__info">
+                <div>
+                  <p class="tours__text tours__text--place">Кавказ</p>
+                  <p class="tours__text tours__text--day">4 дня</p>
+                  <p class="tours__text tours__text--night">3 ночи</p>
+                </div>
+                <h3>Путешествие вокруг&nbsp;Эльбруса</h3>
+                <dl class="tours__description">
+                  <dt class="tours__text">Сложность</dt>
+                  <dd>
+                    <ul>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl class="tours__description">
+                  <dt class="tours__text">Даты набора</dt>
+                  <dd>12.06-19.06</dd>
+                </dl>
+                <dl class="tours__description">
+                  <dt class="tours__text">Группа</dt>
+                  <dd>до 15 чел.</dd>
+                </dl>
               </div>
             </a>
-        </li>
-        <li>
-          <a href="#">
-            <picture>
-              <!-- 1х: 384px/412px; 2x: 768px/824px -->
-              <img src="img/fisht.jpg" srcset="img/fisht@2x.jpg" width="384" height="412"
-                alt="Фото с видом на скалистые вершины">
-            </picture>
-          <div class="tours__info">
-            <div>
-            <p class="tours__text tours__text--place">Адыгея</p>
-            <p class="tours__text tours__text--day">7 дней</p>
-            <p class="tours__text tours__text--night">6 ночей</p>
-            </div>
-            <h3>Через Фишт к&nbsp;Черному&nbsp;морю</h3>
-            <dl class="tours__description">
-              <dt class="tours__text">Сложность</dt>
-              <dd>
-              <ul>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
+          </li>
+          <li class="tours__item swiper-slide">
+            <a href="#">
+              <picture>
+                <!-- 1х: 384px/412px; 2x: 768px/824px -->
+                <img src="img/beluha.jpg" srcset="img/beluha@2x.jpg" width="384" height="412"
+                  alt="Фото с видом на заснеженную гору Белуха и реку">
+              </picture>
+              <div class="tours__info">
+                <div>
+                  <p class="tours__text tours__text--place">Алтай</p>
+                  <p class="tours__text tours__text--day">14 дня</p>
+                  <p class="tours__text tours__text--night">13 ночи</p>
+                </div>
+                <h3>Путь к подножию Белухи</h3>
+                <dl class="tours__description">
+                  <dt class="tours__text">Сложность</dt>
+                  <dd>
+                    <ul>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl class="tours__description">
+                  <dt class="tours__text">Даты набора</dt>
+                  <dd>14.06-23.06</dd>
+                </dl>
+                <dl class="tours__description">
+                  <dt class="tours__text">Группа</dt>
+                  <dd>до 25 чел.</dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="tours__item swiper-slide">
+            <a href="#">
+              <picture>
+                <!-- 1х: 384px/412px; 2x: 768px/824px -->
+                <img src="img/fisht.jpg" srcset="img/fisht@2x.jpg" width="384" height="412"
+                  alt="Фото с видом на скалистые вершины">
+              </picture>
+              <div class="tours__info">
+                <div>
+                  <p class="tours__text tours__text--place">Адыгея</p>
+                  <p class="tours__text tours__text--day">7 дней</p>
+                  <p class="tours__text tours__text--night">6 ночей</p>
+                </div>
+                <h3>Через Фишт к&nbsp;Черному&nbsp;морю</h3>
+                <dl class="tours__description">
+                  <dt class="tours__text">Сложность</dt>
+                  <dd>
+                    <ul>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#white-star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg width="15" height="13">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl class="tours__description">
+                  <dt class="tours__text">Даты набора</dt>
+                  <dd>15.07-19.07</dd>
+                </dl>
+                <dl class="tours__description">
+                  <dt class="tours__text">Группа</dt>
+                  <dd>до 22 чел.</dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <a class="tours__link" href="#tours">Показать все туры</a>
+      </div>
+
+    </section>
+    <section class="training" id="training">
+      <div class="container">
+        <h2>Обучение</h2>
+        <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами&nbsp;которых&nbsp;десятки
+          пройденных&nbsp;маршрутов&nbsp;Кавказа,
+          Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.
+        </p>
+      </div>
+
+      <!-- <div class="training__slider slider">
+          <button class="slider__button  slider__button--prev"></button>
+          <button class="slider__button slider__button--next"></button>
+        </div> -->
+      <div class="container">
+        <div class="training__swiper swiper">
+          <h3 class="training__subtitle">Наши инструкторы</h3>
+          <button class="training__button swiper-button swiper-button--prev"></button>
+          <button class="training__button swiper-button swiper-button--next"></button>
+          <ul class="training__list swiper-wrapper">
+            <li class="training__item swiper-slide">
+              <picture>
+                <!-- 1х: 200px/210px; 2x: 400px/420px -->
+                <img src="img/alex.jpg" srcset="img/alex@2x.jpg" width="200" height="210"
+                  alt="Фото Александра Прокофьева">
+              </picture>
+              <div class="training__wrapper">
+                <h5>Александр Прокофьев</h5>
+                <a href="https://www.vkontakte.com/alex"
+                  aria-label="Ссылка на страницу Вконтакте Александра Прокофьева">
+                  <svg class="social-picture" width="12" height="7">
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
+                </a>
+              </div>
+              <p>Любит природу. Строгий, справедливый и внимательный инструктор, веселый и общительный человек.</p>
+            </li>
+            <li class="training__item swiper-slide">
+              <picture>
+                <!-- 1х: 200px/210px; 2x: 400px/420px -->
+                <img src="img/svetlana.jpg" srcset="img/svetlana@2x.jpg" width="200" height="210"
+                  alt="Фото Светланы Афиногеновой">
+              </picture>
+              <div class="training__wrapper">
+                <h5>Светлана Афиногенова</h5>
+                <a href="https://www.vkontakte.com/svetlana"
+                  aria-label="Ссылка на страницу Вконтакте Светланы Афиногеновой">
+                  <svg class="social-picture" width="12" height="7">
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#white-star"></use>
+                </a>
+              </div>
+              <p>Видеть мир вокруг, познавать его опасности, смотреть сквозь стены, находить друг друга, становиться
+                ближе,
+                чувствовать — в этом назначение жизни.</p>
+            </li>
+            <li class="training__item swiper-slide">
+              <picture>
+                <!-- 1х: 200px/210px; 2x: 400px/420px -->
+                <img src="img/nadejda.jpg" srcset="img/nadejda@2x.jpg" width="200" height="210"
+                  alt="Фото Надежды Колесниченко">
+              </picture>
+              <div class="training__wrapper">
+                <h5>Надежда Колесниченко</h5>
+                <a href="https://www.vkontakte.com/nadejda"
+                  aria-label="Ссылка на страницу Вконтакте Надежды Колесниченко">
+                  <svg class="social-picture" width="12" height="7">
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#star"></use>
+                </a>
+              </div>
+              <p>Участники говорят, что Надежда&nbsp;ответственная, приятная в общении, и в поездках с ней чувствуешь
+                себя
+                спокойно
+                и уверенно. </p>
+            </li>
+            <li class="training__item swiper-slide">
+              <picture>
+                <!-- 1х: 200px/210px; 2x: 400px/420px -->
+                <img src="img/fedor.jpg" srcset="img/fedor@2x.jpg" width="200" height="210"
+                  alt="Фото Федора Кайгородова">
+              </picture>
+              <div class="training__wrapper">
+                <h5>Федор Кайгородов</h5>
+                <a href="https://www.vkontakte.com/fedor" aria-label="Ссылка на страницу Вконтакте Федора Кайгородова">
+                  <svg class="social-picture" width="12" height="7">
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
-                </li>
-                <li>
-                  <svg class="social-picture" width="15" height="13">
-                    <use xlink:href="img/sprite.svg#star"></use>
+                </a>
+              </div>
+              <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, приэльбрусье,
+                Архыз,
+                много путешествует по Европе. </p>
+            </li>
+            <li class="training__item swiper-slide">
+              <picture>
+                <!-- 1х: 200px/210px; 2x: 400px/420px -->
+                <img src="img/sergey.jpg" srcset="img/sergey@2x.jpg" width="200" height="210"
+                  alt="Фото Сергея Денисова">
+              </picture>
+              <div class="training__wrapper">
+                <h5>Сергей Денисов</h5>
+                <a href="https://www.vkontakte.com/sergey" aria-label="Ссылка на страницу Вконтакте Сергея Денисова">
+                  <svg class="social-picture" width="12" height="7">
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
-                </li>
-              </ul>
-            </dd>
-            </dl>
-            <dl class="tours__description">
-              <dt class="tours__text">Даты набора</dt>
-              <dd>15.07-19.07</dd>
-            </dl>
-            <dl class="tours__description">
-              <dt class="tours__text">Группа</dt>
-              <dd>до 22 чел.</dd>
-            </dl>
-          </div>
-          </a>
-        </li>
-      </ul>
-      <a class="tours__link" href="#tours">Показать все туры</a>
+                </a>
+              </div>
+              <p>Профессиональный гид, путешественник, спортсмен, альпинист. Блестящий рассказчик, собеседник; с ним не
+                скучно.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="training__process process-training">
+        <div class="container">
+          <h3 class="process-training__title">Процесс обучения</h3>
+          <ul class="process-training__list">
+            <li class="process-training__item process-training__item--map">Изучение спортивного туристского движения
+            </li>
+            <li class="process-training__item process-training__item--boots">Подготовка и техническое снаряжение в
+              походах</li>
+            <li class="process-training__item process-training__item--tree">Лекции по экологии, окружающей среде и
+              гигиене</li>
+            <li class="process-training__item process-training__item--mountain">Разъяснение характера горных препядствий
+              и их сложности</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="us" id="aboutus">
+      <div class="us__wrapper">
+        <h2 class="us__title">О нас</h2>
+        <div class="us__inner">
+          <h3 class="us__subtitle">История компании</h3>
+          <p class="us__text">
+            В далеком 2000 году мы начали заниматься туризмом - походы, поездки, восхождения, нам это настолько
+            понравилось, что мы этим стали жить.
+            Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.
+          </p>
+        </div>
+        <div class="us__inner">
+          <h3 class="us__subtitle">Наша цель </h3>
+          <p class="us__text">
+            Подарить вам незабываемые впечатления от похода в горы. Мы берем на себя все организационные вопросы. При
+            организации мы обязательно учтем все ваши пожелания. Вам остенется только наслаждаться незабываемым
+            приключеним.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="reviews container" id="reviews">
+      <div class="reviews__swiper swiper">
+        <div class="reviews_inner">
+          <h2 class="reviews__title">Отзывы</h2>
+          <button class="reviews__button swiper-button swiper-button--prev"></button>
+          <button class="reviews__button swiper-button swiper-button--next"></button>
+        </div>
+        <ul class="reviews__list swiper-wrapper">
+          <li class="reviews__item swiper-slide">
+            <blockquote class="reviews__blockquote">
+              <div class="reviews__author">
+                <img class="reviews__img" src="img/frolov.jpg" width="135" height="115">
+                <div class="reviews__info">
+                  <p class="reviews__name">Фролов Александр</p>
+                  <p class="reviews__details">28 лет, Москва</p>
+                </div>
+              </div>
+                <p class="reviews__text">Осенью ходили в поход с друзьями. Впечатления исключительно положительные!
+                  Инструкторы - настоящие эксперты - всему научили, все показали. Рассказали истории
+                  о всех местах, которые мы так
+                  или иначе посещали. </p>
+                <p class="reviews__text">С уверенностью могу разделить жизнь
+                  на до этого похода и после. Настолько сильно не отдыхал душой и телом никогда.
+                  Всем рекомендую! </p>
+            </blockquote>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <blockquote class="reviews__blockquote">
+              <div class="reviews__author">
+                <img class="reviews__img" src="img/oleynik.jpg" width="135" height="115">
+                <div class="reviews__info">
+                  <p class="reviews__name">Светлана Олейник</p>
+                  <p class="reviews__details">25 лет, Владивосток</p>
+                </div>
+              </div>
+                <p class="reviews__text">Хороший полноценный поход с разнообразными локациями. В начале дорога идет по
+                  лыжне, далее прошли мимо полигона, по болотам, у озер и лесных ручьев, остатков дач конца 19 века.
+                  Инструктор Федор Кайгородов добросовестный
+                  и внимательный к технике безопасности и своим туристам.
+                </p>
+                <p class="reviews__text">Совет для будущих походников: важно соблюсти рекомендации в памятке. </p>
+
+            </blockquote>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <blockquote class="reviews__blockquote">
+              <div class="reviews__author">
+                <img class="reviews__img" src="img/bajenova.jpg" width="135" height="115">
+                <div class="reviews__info">
+                  <p class="reviews__name">Евгения Баженовак</p>
+                  <p class="reviews__details">23 года, Кастрома</p>
+                </div>
+              </div>
+                <p class="reviews__text">Поход понравился!!
+                  Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на
+                  18м, поэтому не была уверена, пройду ли до конца. Но шла и шла впереди, не плелась в конце группы. К
+                  моему удивлению второй день прошел для меня легче, чем ожидала, видимо дело привычки.
+                </p>
+                <p class="reviews__text">Спасибо ребятам и инструкторам за помощь и поддержку! </p>
+
+            </blockquote>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- <section class="gallery">
+      <div class="container">
+        <h2 class="gallery__title">Фотогалерея</h2>
+        <p class="gallery__text">Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото.
+          Лучшие фотографии украсят этот раздел нашего сайта.</p>
+      </div>
+      <div class="gallery__swiper">
+        <ul class="gallery__list">
+          <li class="gallery__item swiper-slide">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img" src="img/man.jpg" width="275" height="450"
+                alt="Мужчина с рюкзаком,стоящий на фоне гор">
+            </a>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img" src="img/fire.jpg" width="295" height="181"
+                alt="Группа людей, сидящих у костра">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img" src="img/arm.jpg" width="297" height="269"
+                alt="Рука, держащая компас, на фоне гор">
+            </a>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img" src="img/mountain.jpg" width="270" height="450" alt="Люди, идущие на фоне гор">
+            </a>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img" src="img/hike.jpg" width="295" height="181"
+                alt="Люди в спецодежде, идущие на фоне снега и гор">
+            </a>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img" src="img/tent.jpg" width="297" height="269"
+                alt="Палатка, стоящая на фоне звездного неба">
+            </a>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img" src="img/river.jpg" width="275" height="450"
+                alt="Мужчины, разводящие костер, на фоне реки">
+            </a>
+          </li>
+        </ul>
+        <div class="swiper swiper--prev"></div>
+        <div class="swiper swiper--next"></div>
+      </div>
+    </section> -->
+    <section class="feedback" id="contacts">
+      <div class="container">
+        <div class="feedback__wrapper">
+          <h2 class="feedback__title">Остались вопросы?</h2>
+          <p class="feedback__text">Заполните форму и наш оператор свяжется с вами для консультации.</p>
+          <form class="feedback__form form">
+            <label class="form__label" for="name" aria-label="Введите ваше имя">
+              <input class="form__input" type="name" name="name" id="name" placeholder="Как к вам обращаться?">
+            </label>
+            <label class="form__label" for="tel" aria-label="Введите ваш номер телефона">
+              <input class="form__input" type="tel" name="tel" id="tel" placeholder="Телефон">
+            </label>
+            <button class="form__button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
-  <!-- <script src="js/script.js"></script> -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <a class="footer__logo logo">
+          <svg class="footer__logo logo logo--footer" width="214" height="70">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="footer-nav">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#tours">
+                Туры
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#training">
+                Обучение
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#aboutus">
+                О нас
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#reviews">
+                Отзывы
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#fotos">
+                Фотографии
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#contacts">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a class="footer__tel" href="tel:88007253232">
+          8 800 725 32 32
+        </a>
+      </div>
+      <div class="footer__social social">
+        <ul class="social__list social__list--footer">
+          <li class="social__item social__item--border">
+            <a class="social__link social__link--vk" href="https://www.vkontakte.com/lifetour"
+              aria-label="Ссылка на Вконтакте Лайфтура">
+              <svg class="social__picture social__picture--black" width="12" height="7">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item social__item--border">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/lifetour"
+              aria-label="Ссылка на Фэйсбук Лайфтура">
+              <svg class="social__picture social__picture--black" width="6" height="11">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item social__item--border">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/instagram"
+              aria-label="Ссылка на Инстаграм Лайфтура">
+              <svg class="social__picture social__picture--black" width="13" height="13">
+                <use xlink:href="img/sprite.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__text">Политика конфиденциальности</p>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/main-slider.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

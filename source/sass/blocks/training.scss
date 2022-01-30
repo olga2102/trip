@@ -1,0 +1,126 @@
+.training {
+  overflow: hidden;
+  padding: 0 0 40px;
+}
+
+.training h2 {
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 43px;
+  color: $font-color;
+  margin: 0 0 30px 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 22px;
+    line-height: 27px;
+    margin: 0 0 22px 0;
+  }
+}
+
+.training p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 159.56%;
+  color: $font-color;
+  margin: 0 0 38px 0;
+
+  @media (max-width: $tablet-width) {
+    width: 80%;
+    margin: 0 0 50px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.training__subtitle {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  margin: 0 0 30px;
+  color: $font-color;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.training__list {
+  @include list-reset;
+  margin: 0 0 50px;
+
+  @media (max-width: $tablet-width) {
+    justify-content: flex-start;
+    margin-left: 114px;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+}
+
+.training__item {
+  display: flex;
+  min-width: 234px;
+  width: 234px;
+  min-height: 386px;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 15px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.training__item img {
+  margin: 0 auto;
+}
+
+.training__list h5 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 133.98%;
+  width: 60%;
+  margin: 22px 0 15px;
+}
+
+.training__list p {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 126.67%;
+}
+
+.training__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.training__wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 24px;
+  border: 1px solid $border-blue;
+}
+
+.training__swiper {
+  position: relative;
+}

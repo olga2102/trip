@@ -1,6 +1,7 @@
 .tours {
   margin: 0 auto;
   padding: 0 121px;
+  margin-bottom: 82px;
 
   @media (max-width: $tablet-width) {
     padding: 0 0 0 114px;
@@ -12,43 +13,85 @@
 }
 
 .tours__inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0 0 50px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 20px;
+  }
 }
 
 .tours__list {
   @include list-reset;
-  display: flex;
+  // display: flex;
   margin-bottom: 60px;
-  overflow-x: hidden;
-  flex-wrap: nowrap;
+  // overflow-x: hidden;
+  // flex-wrap: nowrap;
 
   @media (max-width: $mobile-width) {
     margin-bottom: 28px;
   }
 }
 
-.tours__list li {
-  position: relative;
+.tours__item {
+  // position: relative;
   margin-right: 21px;
   min-width: fit-content;
-  background: linear-gradient(0deg, #000000 22.3%, rgba(0, 0, 0, 0) 60.32%);
+  // background: linear-gradient(0deg, #000000 22.3%, rgba(0, 0, 0, 0) 60.32%);
 
   &:last-child {
     margin-right: 0;
   }
 
+  // @media (max-width: $mobile-width) {
+  //   min-width: max-content;
+  // }
+}
+
+.tours__item img {
+  position: absolute;
+  z-index: -1;
+  height: 412px;
+}
+
+.tours__item a {
+  display: flex;
+  position: relative;
+  width: 384px;
+  min-height: 412px;
+
   @media (max-width: $mobile-width) {
-    min-width: max-content;
+    max-width: 100%;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 384px;
+    height: 410px;
+    top: 0;
+    background: linear-gradient(0deg, #000000 22.3%, rgba(0, 0, 0, 0) 60.32%);
+    opacity: 0.58;
+
+    @media (max-width: $mobile-width) {
+      max-width: 100%;
+      width: auto;
+      flex-shrink: 0;
+    }
   }
 }
 
-.tours h2 {
+.tours__title {
+  margin: 0 0 20px;
   font-weight: 800;
   font-size: 35px;
   line-height: 43px;
   color: $font-color;
-  margin: 0 0 50px;
 
   @media (max-width: $tablet-width) {
     font-size: 25px;
@@ -56,19 +99,20 @@
   }
 
   @media (max-width: $mobile-width) {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
   }
 }
 
 .tours__info {
-  position: absolute;
+  // position: absolute;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 384px;
   top: 40%;
   padding: 20px;
+  margin-top: auto;
+  z-index: 2;
 
   @media (max-width: $mobile-width) {
     max-width: 281px;
@@ -166,6 +210,7 @@
 
   @media (max-width: $mobile-width) {
     margin: 23px 0 35px;
+
   }
 }
 
@@ -206,6 +251,10 @@
 .tours__description li {
   margin-right: 0;
   background: none;
+
+  &::before {
+    background: none;
+  }
 }
 
 .tours__link {
@@ -249,4 +298,8 @@
   &--prev {
     margin-right: 5px;
   }
+}
+
+.tours__inner .tours__swiper {
+  position: absolute;
 }

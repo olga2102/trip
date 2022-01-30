@@ -1,9 +1,30 @@
-.slider {
+// .swiper{
+//   display: flex;
+// }
+
+// .swiper-container {
+//   position: relative;
+//   padding-top: 50px;
+// }
+
+ .swiper-button {
   @include button-reset;
-  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  position: absolute;
   width: 37px;
   height: 35px;
   background-color: $background-blue;
+  top: 0;
+
+  &--prev {
+    right: 40px;
+  }
+
+  &--next {
+    right: 0;
+    transform: rotate(180deg);
+  }
 
   &--next::before,
   &--prev::before {
@@ -13,11 +34,8 @@
     height: 10px;
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
-    top: 39%;
-    left: 30%;
-  }
-
-  &--next {
-    transform: rotate(180deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

@@ -1,0 +1,87 @@
+.us {
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 741px;
+    height: 541px;
+    background-image: url("../img/back-us.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: $tablet-width) {
+      width: 350px;
+      height: 370px;
+      transform: translate(0, 50%);
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 320px;
+      height: 330px;
+      transform: inherit;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.us__title {
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 43px;
+  margin: 0 0 30px;
+  color: $font-color;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 15px;
+  }
+}
+
+.us__subtitle {
+  margin: 0 0 20px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: $font-color;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 10px;
+  }
+}
+
+.us__text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.us__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 120px 0 15px;
+  width: 50%;
+
+  @media (max-width: $tablet-width) {
+    padding: 30px 15px;
+    width: 60%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 15px;
+    width: 100%;
+  }
+}
+
+.us__inner {
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 15px;
+  }
+}
